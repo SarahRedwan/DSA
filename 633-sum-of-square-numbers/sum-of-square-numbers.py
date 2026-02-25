@@ -1,15 +1,13 @@
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
-        right=int(c**0.5)
         left=0
+        right=int(c**0.5)
         while left<=right:
-            if right*right+left*left==c:
+            if left**2+right**2==c:
                 return True
-            elif right*right+left*left<c:
+            elif left**2+right**2<c:
                 left+=1
-            elif right*right+left*left>c :
+            else:
                 right-=1
-
         return False
-
         
