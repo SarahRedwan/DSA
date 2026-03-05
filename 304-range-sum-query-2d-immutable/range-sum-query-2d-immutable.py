@@ -3,6 +3,7 @@ class NumMatrix:
     def __init__(self, matrix):
         if not matrix:
             return
+            
 
         row=len(matrix)
         column=len(matrix[0])
