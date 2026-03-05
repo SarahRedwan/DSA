@@ -1,6 +1,10 @@
 class Solution:
-    def singleNumber(self, nums):
-        index = 0
+    def singleNumber(self, nums: List[int]) -> int:
+        freq={}
+
         for num in nums:
-            index ^= num
-        return index
+            freq[num]=freq.get(num,0)+1
+
+        for num in freq:
+            if freq[num]==1:
+                return num
