@@ -3,19 +3,19 @@ class Solution:
         stacks=[]
         stackt=[]
 
-        for i in s :
-            if i=='#':
+        for i in s:
+            if i=="#" :
                 if stacks:
                     stacks.pop()
             else:
                 stacks.append(i)
-        st="".join(stacks)
+        ss="".join(stacks)
         for j in t:
-            if j=='#':
+            if  j=="#" :
                 if stackt:
                     stackt.pop()
             else:
                 stackt.append(j)
-        tt="".join(stackt)
+        st="".join(stackt)
 
-        return st==tt
+        return ss==st
