@@ -8,16 +8,15 @@ class Solution:
         
         n = len(nums)
         mn, mx = min(nums), max(nums)
+        range1=mx-mn
         
         if mn == mx:
             return 0
         
-        gap = math.ceil((mx - mn) / (n - 1))
-        
-        buckets = [[] for _ in range(n)]
+        buckets = [[] for _ in range(n+1)]
         
         for num in nums:
-            idx = (num - mn) // gap
+            idx = (int(n*(num - mn) )// range1)
             buckets[idx].append(num)
         
         prev_max = None
