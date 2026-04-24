@@ -14,8 +14,12 @@ class Solution:
                         dfs(x, y, visited)
 
         pacific, atlantic = set(), set()
-        for j in range(n): dfs(0, j, pacific)
-        for i in range(m): dfs(i, 0, pacific)
-        for j in range(n): dfs(m-1, j, atlantic)
-        for i in range(m): dfs(i, n-1, atlantic)
+        for j in range(n): 
+            dfs(0, j, pacific)
+        for i in range(m): 
+            dfs(i, 0, pacific)
+        for j in range(n):
+             dfs(m-1, j, atlantic)
+        for i in range(m): 
+            dfs(i, n-1, atlantic)
         return list(pacific & atlantic)
