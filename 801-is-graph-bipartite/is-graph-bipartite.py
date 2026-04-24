@@ -2,10 +2,9 @@ class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
         n=len(graph)
         color=[-1 for _ in range(n)]
-
         for node in range(n):
             if color[node]==-1:
-                color[node]=0
+                color[node]=1
             if not self.dfs(node,graph,color):
                 return False
         return True
@@ -21,4 +20,5 @@ class Solution:
             elif color[neighbor]==color[node]:
                 return False
         return True
+
             
