@@ -6,5 +6,5 @@ class Solution:
         for _ in range(k):
             max_num = max(freq, key=freq.get)  
             res.append(max_num)
-            del freq[max_num]  #
+            del freq[max_num]  
         return res
