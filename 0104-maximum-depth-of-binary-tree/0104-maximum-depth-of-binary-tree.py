@@ -10,9 +10,9 @@ class Solution:
             return 0
         if root.left is None and root.right is None:
             return 1
-        if root.left is None:
-            return self.maxDepth(root.right)+1
         if root.right is None:
-            return self.maxDepth(root.left)+1
+            return 1+self.maxDepth(root.left)
+        if root.left is None:
+            return 1+self.maxDepth(root.right)
         
-        return max(self.maxDepth(root.left),self.maxDepth(root.right))+1
+        return 1+max(self.maxDepth(root.left),self.maxDepth(root.right))
